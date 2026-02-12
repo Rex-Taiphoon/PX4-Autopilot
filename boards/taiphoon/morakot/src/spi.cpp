@@ -36,32 +36,32 @@
 #include <nuttx/spi/spi.h>
 
 
-constexpr px4_spi_bus_all_hw_t px4_spi_buses_all_hw[BOARD_NUM_SPI_CFG_HW_VERSIONS] = {
-	initSPIFmumID(Taiphoon_Morakot_0, {
-		initSPIBus(SPI::Bus::SPI1, {
-			// 選擇陀螺儀的CS與DRDY腳位符合Morakot硬體配置
-			initSPIDevice(DRV_IMU_DEVTYPE_ICM45686, 
-				SPI::CS{GPIO::PortA, GPIO::Pin15}, 		/* PA15 */
-				SPI::DRDY{GPIO::PortD, GPIO::Pin11}		/* PD11 */
-				),
-		}, {GPIO::PortI, GPIO::Pin11})
-		,
-		// 選擇外置OSD的CS腳位符合Morakot硬體配置
-		initSPIBusExternal(SPI::Bus::SPI4, {
-			initSPIConfigExternal(SPI::CS{GPIO::PortE, GPIO::Pin4})
-		}),
-	}),
-};
-
-// static constexpr bool unused = validateSPIConfig(px4_spi_buses_all_hw);
-
-// constexpr px4_spi_bus_t px4_spi_buses[SPI_BUS_MAX_BUS_ITEMS] = {
-// 	initSPIBus(SPI::Bus::SPI1, {
-// 		initSPIDevice(DRV_IMU_DEVTYPE_ICM45686, SPI::CS{GPIO::PortA, GPIO::Pin15}, SPI::DRDY{GPIO::PortD, GPIO::Pin11}),
-// 	}),
-// 	initSPIBus(SPI::Bus::SPI4, {
-// 		initSPIDevice(SPIDEV_FLASH(0), SPI::CS{GPIO::PortE, GPIO::Pin4}),
+// constexpr px4_spi_bus_all_hw_t px4_spi_buses_all_hw[BOARD_NUM_SPI_CFG_HW_VERSIONS] = {
+// 	initSPIFmumID(Taiphoon_Morakot_0, {
+// 		initSPIBus(SPI::Bus::SPI1, {
+// 			// 選擇陀螺儀的CS與DRDY腳位符合Morakot硬體配置
+// 			initSPIDevice(DRV_IMU_DEVTYPE_ICM45686, 
+// 				SPI::CS{GPIO::PortA, GPIO::Pin15}, 		/* PA15 */
+// 				SPI::DRDY{GPIO::PortD, GPIO::Pin11}		/* PD11 */
+// 				),
+// 		}, {GPIO::PortI, GPIO::Pin11})
+// 		,
+// 		// 選擇外置OSD的CS腳位符合Morakot硬體配置
+// 		initSPIBusExternal(SPI::Bus::SPI4, {
+// 			initSPIConfigExternal(SPI::CS{GPIO::PortE, GPIO::Pin4})
+// 		}),
 // 	}),
 // };
 
-// static constexpr bool unused = validateSPIConfig(px4_spi_buses);
+// static constexpr bool unused = validateSPIConfig(px4_spi_buses_all_hw);
+
+constexpr px4_spi_bus_t px4_spi_buses[SPI_BUS_MAX_BUS_ITEMS] = {
+	initSPIBus(SPI::Bus::SPI1, {
+		initSPIDevice(DRV_IMU_DEVTYPE_ICM45686, SPI::CS{GPIO::PortA, GPIO::Pin15}, SPI::DRDY{GPIO::PortD, GPIO::Pin11}),
+	}),
+	initSPIBus(SPI::Bus::SPI4, {
+		initSPIDevice(SPIDEV_FLASH(0), SPI::CS{GPIO::PortE, GPIO::Pin4}),
+	}),
+};
+
+static constexpr bool unused = validateSPIConfig(px4_spi_buses);

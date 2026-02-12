@@ -477,18 +477,21 @@
  * receive errors can be detected using GPIO pin PD5
  */
 
-#define GPIO_ETH_MDC              GPIO_ETH_MDC_0                              /* PC1 */
-#define GPIO_ETH_MDIO             GPIO_ETH_MDIO_0                             /* PA2 */
-#define GPIO_ETH_RMII_CRS_DV      GPIO_ETH_RMII_CRS_DV_0                      /* PA7 */
-#define GPIO_ETH_RMII_REF_CLK     GPIO_ETH_RMII_REF_CLK_0                     /* PA1 */
+// #define GPIO_ETH_MDC              GPIO_ETH_MDC_0                              /* PC1 */
+// #define GPIO_ETH_MDIO             GPIO_ETH_MDIO_0                             /* PA2 */
+// #define GPIO_ETH_RMII_CRS_DV      GPIO_ETH_RMII_CRS_DV_0                      /* PA7 */
+// #define GPIO_ETH_RMII_REF_CLK     GPIO_ETH_RMII_REF_CLK_0                     /* PA1 */
 
-#define GPIO_ETH_RMII_RXD0        GPIO_ETH_RMII_RXD0_0                        /* PC4 */
-#define GPIO_ETH_RMII_RXD1        GPIO_ETH_RMII_RXD1_0                        /* PC5 */
+// #define GPIO_ETH_RMII_RXD0        GPIO_ETH_RMII_RXD0_0                        /* PC4 */
+// #define GPIO_ETH_RMII_RXD1        GPIO_ETH_RMII_RXD1_0                        /* PC5 */
 
-#define GPIO_ETH_RMII_TX_EN      (GPIO_ETH_RMII_TX_EN_1 | GPIO_SPEED_100MHz)  /* PB11 */
-#define GPIO_ETH_RMII_TXD0       (GPIO_ETH_RMII_TXD0_1 | GPIO_SPEED_100MHz)   /* PB12 */
-#define GPIO_ETH_RMII_TXD1       (GPIO_ETH_RMII_TXD1_1 | GPIO_SPEED_100MHz)   /* PB13 */
+// #define GPIO_ETH_RMII_TX_EN      (GPIO_ETH_RMII_TX_EN_1 | GPIO_SPEED_100MHz)  /* PB11 */
+// #define GPIO_ETH_RMII_TXD0       (GPIO_ETH_RMII_TXD0_1 | GPIO_SPEED_100MHz)   /* PB12 */
+// #define GPIO_ETH_RMII_TXD1       (GPIO_ETH_RMII_TXD1_1 | GPIO_SPEED_100MHz)   /* PB13 */
 
+#define GPIO_ETH_RMII_TX_EN	GPIO_ETH_RMII_TX_EN_1 /* PB11 */
+#define GPIO_ETH_RMII_TXD0	GPIO_ETH_RMII_TXD0_1  /* PB12 */
+#define GPIO_ETH_RMII_TXD1	GPIO_ETH_RMII_TXD1_1  /* PB13 */
 
 
 /* USB
