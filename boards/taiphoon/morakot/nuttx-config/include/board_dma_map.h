@@ -65,8 +65,8 @@
 // DMAMUX2 Using at most 8 Channels on DMA2 --------   Assigned
 //                                                     V
 
-#define DMAMAP_SPI3_RX    DMAMAP_DMA12_SPI3RX_1     /* 1 DMA2:61 BMI088 */
-#define DMAMAP_SPI3_TX    DMAMAP_DMA12_SPI3TX_1     /* 2 DMA2:62 BMI088 */
+// #define DMAMAP_SPI3_RX    DMAMAP_DMA12_SPI3RX_1     /* 1 DMA2:61 BMI088 */
+// #define DMAMAP_SPI3_TX    DMAMAP_DMA12_SPI3TX_1     /* 2 DMA2:62 BMI088 */
 
 #define DMAMAP_USART3_RX  DMAMAP_DMA12_USART3RX_1   /* 3 DMA2:45 DEBUG */
 #define DMAMAP_USART3_TX  DMAMAP_DMA12_USART3TX_1   /* 4 DMA2:46 DEBUG */
@@ -83,5 +83,5 @@
 // DMAMUX2 Using at most 8 Channels on BDMA --------   Assigned
 //                                                     V
 
-#define DMAMAP_SPI6_RX    DMAMAP_BDMA_SPI6_RX       /* 1 BDMA:11 SPI J11 */
-#define DMAMAP_SPI6_TX    DMAMAP_BDMA_SPI6_TX       /* 2 BDMA:12 SPI J11 */
+// #define DMAMAP_SPI6_RX    DMAMAP_BDMA_SPI6_RX       /* 1 BDMA:11 SPI J11 */
+// #define DMAMAP_SPI6_TX    DMAMAP_BDMA_SPI6_TX       /* 2 BDMA:12 SPI J11 */
